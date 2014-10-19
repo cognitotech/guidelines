@@ -56,9 +56,11 @@ Metrics/LineLength:
 
 ### FAQ
 **Q**: How to install `Package Control` for SublimeText
+
 **A**: Follow the instructions in this [link](https://sublime.wbond.net/installation)
 
 **Q**: I can't find `SublimeLinter`, `SublimeLinter-rubocop`, ... in SublimeText package control
+
 **A**: Try to reinstall (remove and then install) SublimeText package control using following steps
 ``` 
 1. Click the Preferences > Browse Packages… menu
@@ -69,6 +71,7 @@ Metrics/LineLength:
 ```
 
 **Q**: I have installed all plugin but the linter didn't run in my editor
+
 **A**: Check if you have rubocop installed?
 ```bash
 $ rubocop -v

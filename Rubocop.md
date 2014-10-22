@@ -54,6 +54,34 @@ Metrics/LineLength:
   Max: 120
 ```
 
+If you enable Rails cops, consider add `schema.rb`, `migrations` (maybe) or some generated config into exclude section.
+
+### Disable cops
+In some rare case you want to disable the cops for one class or one method, you use comment to temporary disable the cops then renable them later. (take a look at default config file to find what you need to disable)
+
+```ruby
+# long line
+# rubocop:disable Metrics/LineLength
+a = super_long_long_long_long_long_long_long_long_long_long_long_long_long_long_long_long_long_long_long_long_long_long_long_method
+# rubocop:enable Metrics/LineLength
+
+# long method
+# rubocop:disable Metrics/MethodLength
+def long_method
+  # super long method
+end
+# rubocop:enable Metrics/MethodLength
+
+```
+
+If you have some 3rd party code or generated file, you can disable all cops on them
+
+```ruby
+# rubocop:disable all
+[third party code]
+# rubocop:enable all
+```
+
 ### FAQ
 **Q**: How to install `Package Control` for SublimeText
 

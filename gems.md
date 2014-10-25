@@ -4,7 +4,23 @@ Here are the list of gems that you want to use in your project.
 ## Development Helper
 These gem will give you a better delopment enviroment, consider to use them all
 
-### [better_errors](https://github.com/charliesome/better_errors) & [binding_of_caller](https://github.com/banister/binding_of_caller) 
+### [awesome_print](https://github.com/michaeldv/awesome_print)
+Awesome Print help outputing the object structure in a clean and readable way. It's super helpful for debug and inspect code.
+
+![awesome_print](https://www.evernote.com/shard/s232/sh/12166c24-e9df-46c6-ad25-31ed5b397611/0243fb17ed3dab3be4ef3a98f5920496/res/b410a546-cfdd-4b28-9a08-2fdbd50d5490/skitch.png?resizeSmall&width=832)
+
+Usage:
+```ruby
+hash = { username: 'vinh', email: 'ducvinh@siliconstraits.vn' }
+ap hash
+```
+If using `pry` as default interactive shell for Ruby, put the following in `~/.pryrc`, all output in pry will automatically use Awesome Print
+```ruby
+require "awesome_print"
+AwesomePrint.pry!
+```
+
+### [better_errors](https://github.com/charliesome/better_errors) & [binding_of_caller](https://github.com/banister/binding_of_caller)
 Better Errors replaces the standard Rails error page with a much better and more useful error page. It has a live shell so you can find out what the problem in your page. [binding_of_caller](#binding_of_caller)
 ![better_errors](https://camo.githubusercontent.com/3fa6840d5e20236b4f768d6ed4b42421ba7c2f21/68747470733a2f2f692e696d6775722e636f6d2f367a42474141622e706e67) is needed to enable [better_errors](#better_errors) advanced feature (REPL, local/instance variable inspection, pretty stack frame names)
 ```ruby
@@ -49,6 +65,19 @@ group :developement, :test do # maybe you will need in when run test too
   gem 'pry-rails'
 end
 ```
+
+### [rack-mini-profiler](https://github.com/MiniProfiler/rack-mini-profiler)
+This gem help profiling every request and giving you the result in a mini popup on top corner (can be configured). It let you know which part of your request consume too much time and detect unoptimized queries.
+
+![rack-mini-profiler](http://i.imgur.com/PsjLY.png)
+
+To hide the rack-mini-profiler popup, press `Alt / Option + p` or add params `pp=disable` to url.
+
+### [did_you_mean](https://github.com/yuki24/did_you_mean)
+
+Act like Google "Did you mean?" feature, it provide some suggestion when you accidentally use a wrong method or class name, super helpful for development.
+
+![did_you_mean](https://camo.githubusercontent.com/3e15b35252cc585660699e447a438722261b0506/68747470733a2f2f726177322e6769746875622e636f6d2f79756b6932342f6469645f796f755f6d65616e2f346536643462343035373737663434656362326130653238633461626231653433386161333366662f646f63732f6265747465725f6572726f72735f6578616d706c652e706e67)
 
 ## Application Feature
 ## Testing

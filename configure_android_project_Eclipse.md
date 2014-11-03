@@ -1,4 +1,4 @@
-#Configure Android projects in Eclipse
+#Configuration for Android projects in Eclipse
 
 ##App structure:
 * /ProjectName

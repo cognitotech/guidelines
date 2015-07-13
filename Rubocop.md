@@ -20,6 +20,9 @@ gem install rubocop
     - Install package `SublimeLinter`
     - Install package `SublimeLinter-rubocop`
   * Vim
+    - Install [Syntastic][1]. See also [vim plugin 101][2] if not sure how.
+    - Set rubocop as syntax checker for ruby: `let g:syntastic_ruby_checkers=['rubocop']`
+    - More info [here][3]
   * Atom
 
 ### Configuration
@@ -105,3 +108,7 @@ If you have some 3rd party code or generated file, you can disable all cops on t
 $ rubocop -v
 2.60.1
 ```
+
+[1]: https://github.com/scrooloose/syntastic
+[2]: http://www.nerdyweekly.com/posts/modern-vim-plugin-management-pathogen-vs-vundle/
+[3]: https://github.com/scrooloose/syntastic/wiki/Ruby%3A---rubocop
